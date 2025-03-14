@@ -2,6 +2,8 @@
 
 CultureX Media Uploader Frontend is a **React.js** application that allows users to securely upload and view media files. It integrates with an Express.js backend and AWS S3 for media storage.
 
+Base URL - https://main.d1mt6dvdjxz1k1.amplifyapp.com
+
 ---
 
 ## 📌 Features
