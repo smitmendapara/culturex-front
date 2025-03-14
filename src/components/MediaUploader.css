@@ -1,0 +1,105 @@
+/* General Container */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Upload Section */
+.upload-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+/* Custom File Upload */
+.custom-file-upload {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-file-upload:hover {
+  background-color: #e9ecef;
+  transform: scale(1.05);
+}
+
+.custom-file-upload input {
+  display: none;
+}
+
+/* Upload Button */
+.upload-section button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.upload-section button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.upload-section button:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Media Grid */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+/* Media Cards */
+.media-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Items */
+.media-card img,
+.media-card video {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Views Text */
+.views {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
