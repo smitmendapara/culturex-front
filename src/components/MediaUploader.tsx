@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
@@ -22,7 +22,7 @@ const MediaUploader = () => {
     }, [token, navigate]);
 
     // * fetch media files
-    const fetchMedia = async () => {
+    const fetchMedia = useCallback(async () => {
         if (!token) return;
 
         try {
@@ -45,12 +45,12 @@ const MediaUploader = () => {
         } catch (error) {
             toast.error('Failed to fetch media!');
         }
-    };
+    }, []);
 
     // * fetch media on component mount
     useEffect(() => {
         fetchMedia();
-    }, [token]);
+    }, [token, fetchMedia]);
 
     // * handle file upload
     const handleUpload = async () => {
