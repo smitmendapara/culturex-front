@@ -1,46 +1,65 @@
-# Getting Started with Create React App
+# CultureX Media Uploader - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CultureX Media Uploader Frontend is a **React.js** application that allows users to securely upload and view media files. It integrates with an Express.js backend and AWS S3 for media storage.
 
-## Available Scripts
+Base URL - https://culturex-front.onrender.com
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📌 Features
+- **Google Authentication**
+- **Upload Media Files** (Images & Videos)
+- **View Uploaded Media**
+- **File Type Tagging** for better organization
+- **Separate Image & Video Display**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠 Tech Stack
+- **React.js** (Frontend Framework)
+- **Axios** (API Calls)
+- **React Router** (Navigation)
+- **Toast Notifications** (Message Promt)
+- **CSS** for Styling (No Tailwind)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Setup & Installation
 
-### `npm run build`
+### 1⃣ Clone Repository
+```sh
+git clone https://github.com/smitmendapara/culturex-front.git
+cd culturex-front
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 2⃣ Install Dependencies
+```sh
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3⃣ Configure Environment Variables
+Create a `.env` file in the root directory from the `example.env` and add the respective values.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 4⃣ Run the Application
+```sh
+npm start
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📚 Usage Guide
+### Authentication
+- Users must be logged in to upload or view media.
+- If not authenticated, users are redirected to the login page.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Uploading Media
+- Click on **Choose File** to select an image or video.
+- Press **Upload** to send the file to the server.
+- Uploaded files are displayed in their respective sections (Images/Videos).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Viewing Media
+- **Images** are displayed in a grid format.
+- **Videos** are displayed with a play button.
+- File type and size are displayed as tags.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
