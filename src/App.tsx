@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import Login from './components/Authenticate';
@@ -15,17 +15,17 @@ const Main = () => {
   const navigate = useNavigate();
   const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || '';
 
-  const validateUserSession = useCallback(async () => {
+  useEffect(() => {
+    validateUserSession();
+  }, []);
+
+  const validateUserSession = async () => {
     const token = localStorage.getItem('authToken');
 
     if (!token || !(await verifyToken(token))) {
       handleUnauthorized();
     }
-  }, []);
-
-  useEffect(() => {
-    validateUserSession();
-  }, [validateUserSession]);
+  };
 
   const verifyToken = async (token: string): Promise<boolean> => {
     try {
